@@ -63,7 +63,7 @@ class Home extends React.Component {
 
   handleSelect(event) {
     if (event === "Cars") {
-      this.setState({ fruitsList: this.state.carsList.sort() });
+      this.setState({ carsList: this.state.carsList.sort() });
       this.setState({ showCars: true });
       this.setState({ showFruits: false });
     } else if (event === "Fruits") {
@@ -108,7 +108,7 @@ class Home extends React.Component {
         </DropdownButton>
         {this.state.showFruits || this.state.showCars ?
           <div style={{ marginTop: "25px" }}>The default list is in Ascending order. Please click on toggle button to change it to descending Order
-            <Button style={{ marginTop: "5px" }} variant="secondary" onClick={this.toggle}>Toggle</Button></div> : null}
+            <br /><Button style={{ marginTop: "5px" }} variant="secondary" onClick={this.toggle}>Toggle</Button></div> : null}
         {this.state.showFruits ?
           <div>
             Showing Results for Fruits
